@@ -5,7 +5,7 @@ export type User = {
 };
 
 export const emptyUser: User = {
-  username: "",
-  email: "",
+  username: "testuser",
+  email: "user@test.com",
   password: "",
 };
