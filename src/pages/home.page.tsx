@@ -5,6 +5,7 @@ import { userListState } from "../recoil/user.atoms";
 
 const HomePage: React.FC = () => {
   const [users] = useRecoilState(userListState);
+
   return (
     <div>
       {users.map((user) => (
