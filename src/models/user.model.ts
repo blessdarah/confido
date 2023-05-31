@@ -2,10 +2,14 @@ export type User = {
   username: string;
   email: string;
   password: string;
+  status: string;
+  avatar: string;
 };
 
 export const emptyUser: User = {
-  username: "testuser",
-  email: "user@test.com",
+  username: "",
+  email: "",
   password: "",
+  status: "",
+  avatar: "",
 };
