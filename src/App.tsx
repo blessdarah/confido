@@ -4,6 +4,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "./pages/home.page";
 import { ROUTES } from "./constants/app-routes.constants";
 import { RecoilRoot } from "recoil";
+import authRoutes from "./routes/auth.routes";
+import { ConfigProvider } from "antd";
 
 function App() {
   const router = createBrowserRouter([
@@ -11,11 +13,15 @@ function App() {
       path: ROUTES.HOME,
       element: <HomePage />,
     },
+    ...authRoutes,
   ]);
+
   return (
     <React.StrictMode>
       <RecoilRoot>
-        <RouterProvider router={router} />
+        <ConfigProvider componentSize="large">
+          <RouterProvider router={router} />
+        </ConfigProvider>
       </RecoilRoot>
     </React.StrictMode>
   );
